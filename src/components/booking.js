@@ -6,13 +6,13 @@ import 'react-dates/lib/css/_datepicker.css'
 
 export default class Booking extends React.Component {
 	constructor(props) {
-		super(props)
-		this.state = { startDate: null, endDate: null, focusedInput: null }
+        super(props)
+		this.state = { startDate: moment().add(1, 'days'), endDate: moment().add(2, 'days'), focusedInput: [moment().add(1, 'days'), moment().add(2, 'days')] }
 	}
 
 	render() {
 		return (
-			<form action="https://book.octorate.com/octobook/site/reservation/result.xhtml" target="_blank" method="GET" data-serialize="false">
+			<form id="booking-form" action="https://book.octorate.com/octobook/site/reservation/result.xhtml" target="_blank" method="GET" data-serialize="false">
 				<input type="hidden" name="siteKey" value={process.env.GATSBY_OCTORATE_SITEKEY} />
 				<input type="hidden" name="lang" value="en" />
 				{/* <label>Check in</label> */}
