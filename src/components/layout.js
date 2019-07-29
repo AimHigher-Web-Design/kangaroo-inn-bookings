@@ -19,6 +19,7 @@ const Layout = ({ children, meta }) => (
 						title
 						description
 						siteUrl
+						octorateKey
 					}
 				}
 			}
@@ -73,11 +74,6 @@ const Meta = ({ name, title, description, slug, siteUrl, image }) => {
 			<meta name="twitter:title" content={name} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={image} />
-			<script
-				type="text/javascript"
-				src="https://resx.octorate.com/octobook/resources/widget/js/form.js"
-				data-sitekey="46ce720bf72c0e97c337590f04f27a0c"
-			></script>
 		</Helmet>
 	)
 }

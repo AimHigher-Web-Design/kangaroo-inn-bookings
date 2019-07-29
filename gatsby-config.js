@@ -7,6 +7,7 @@ module.exports = {
 		title: 'Kangaroo Inn - Bookings',
 		description: "Perth's Best Value Budget Accommodation Backpacker Australia",
 		siteUrl: 'https://bookings.kangarooinn.com.au',
+		octorateKey: process.env.GATSBY_OCTORATE_SITEKEY,
 	},
 	plugins: [
 		'gatsby-plugin-sass',
