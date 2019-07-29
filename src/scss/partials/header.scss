@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+header {
+	padding: 10px;
+	width: 100%;
+	z-index: 5;
+
+	svg {
+		padding-top: 20px;
+	}
+}
+
+@media screen and (min-width: 40rem) {
+	header {
+		min-height: 9em;
+	}
+}
