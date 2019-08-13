@@ -94,4 +94,17 @@
 			max-width: unset;
 		}
 	}
+
+	@media (min-width: 800px) {
+		.features {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+			grid-auto-rows: auto;
+
+			.block {
+				height: 40vw;
+				max-height: 500px;
+			}
+		}
+	}
 }
