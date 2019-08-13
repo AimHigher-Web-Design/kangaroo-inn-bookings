@@ -1,12 +1,19 @@
 @import '../variables.scss';
 
 header {
+	display: flex;
+	justify-content: center;
 	padding: 10px;
 	width: 100%;
 	z-index: 5;
 
 	svg {
 		padding-top: 20px;
+	}
+
+	.site-logo {
+		width: 80vw;
+		max-width: 500px;
 	}
 }
 

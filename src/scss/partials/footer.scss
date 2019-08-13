@@ -47,6 +47,7 @@ footer {
 		}
 
 		ul {
+			display: flex;
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
@@ -54,8 +55,8 @@ footer {
 	}
 
 	.aimhigher {
-		--secondary: #{$primary};
-		--primary: #{$primary};
+		--secondary: #{$primary_dark_75};
+		--primary: #{$primary_dark_75};
 		margin-right: 20px;
 
 		svg {

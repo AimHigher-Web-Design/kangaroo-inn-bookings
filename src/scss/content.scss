@@ -16,9 +16,11 @@ body {
 
 h1,
 h2,
-h3 {
-	color: $primary;
+h3,
+legend {
+	color: $primary_dark_75;
 	font: $font_headings;
+	font-weight: bold;
 }
 
 h1 {
@@ -144,11 +146,20 @@ figure {
 }
 
 form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin: 0 auto;
 	max-width: 400px;
 
 	label {
 		display: block;
+		font-weight: bold;
+		padding: 20px 0;
+	}
+
+	legend {
+		margin: 10px 0 20px;
 	}
 
 	input,
@@ -159,6 +170,111 @@ form {
 
 	&:not(#booking-form) {
 		display: none;
+	}
+
+	.DateRangePickerInput {
+		border-radius: 0;
+		border-color: $secondary;
+
+		ul,
+		li {
+			font-size: 14px;
+			padding: 0;
+		}
+	}
+
+	.DateRangePicker_picker {
+		left: -20px;
+	}
+
+	.DateInput_input__focused {
+		border-bottom-color: $primary;
+	}
+
+	.CalendarDay__selected,
+	.CalendarDay__selected:active,
+	.CalendarDay__selected:hover {
+		background: $primary;
+		border-color: $primary;
+		color: $secondary;
+	}
+
+	.CalendarDay__selected_span {
+		background: $primary_light_50;
+		border-color: $primary_light_50;
+		color: $secondary;
+	}
+
+	.CalendarDay__selected_span:active,
+	.CalendarDay__selected_span:hover {
+		background: $primary_dark_75;
+		border-color: $primary_dark_75;
+		color: $secondary;
+	}
+
+	.CalendarDay__default:hover {
+		background: $secondary_light_10;
+		border-color: $secondary_light_10;
+	}
+
+	.DayPickerKeyboardShortcuts_show__bottomRight::before {
+		border-right-color: $primary;
+	}
+
+	.DayPickerKeyboardShortcuts_show__bottomRight:hover::before {
+		border-right-color: $secondary;
+	}
+
+	fieldset {
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	div.btn,
+	input[type='submit'] {
+		background: $primary;
+		border: 2px solid $primary;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: $secondary;
+		cursor: pointer;
+		height: 1.4em;
+		margin: 0;
+		text-align: center;
+		width: 1.4em;
+
+		&:active,
+		&:hover,
+		&:focus {
+			background: $secondary;
+			border-color: $secondary;
+			color: $primary;
+		}
+	}
+
+	input[type='submit'] {
+		font-size: 1em;
+		height: auto;
+		margin: 20px 0;
+		padding: 10px 25px;
+		width: auto;
+	}
+
+	input[type='number'] {
+		border: 1px solid $secondary;
+		-moz-appearance: textfield;
+		margin: 0 20px;
+		padding: 10px 15px;
+		text-align: center;
+		width: 70px;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
 	}
 }
 

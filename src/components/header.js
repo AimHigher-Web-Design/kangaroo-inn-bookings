@@ -10,8 +10,8 @@ const Header = () => (
 			query {
 				file(name: { eq: "logo" }) {
 					childImageSharp {
-						fixed(width: 500) {
-							...GatsbyImageSharpFixed_withWebp
+						fluid(maxWidth: 500) {
+							...GatsbyImageSharpFluid_withWebp
 						}
 					}
 				}
@@ -20,7 +20,7 @@ const Header = () => (
 		render={data => (
 			<header>
 				<Link to="/" className="site-logo">
-					<Img fixed={data.file.childImageSharp.fixed} />
+					<Img fluid={data.file.childImageSharp.fluid} style={{ width: '100%', height: 'auto', minHeight: '50px' }} />
 				</Link>
 			</header>
 		)}
