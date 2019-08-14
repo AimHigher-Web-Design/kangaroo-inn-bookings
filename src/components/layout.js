@@ -66,8 +66,8 @@ const Meta = ({ name, title, description, slug, siteUrl, image }) => {
 			<meta property="og:url" content={siteUrl + slug} />
 
 			<meta name="title" property="og:title" content={name} />
-			<meta property="og:image" content={image} />
-			<meta property="og:description" content={description} />
+			<meta name="image" property="og:image" content={image} />
+			<meta name="description" property="og:description" content={description} />
 
 			{/* Twitter */}
 			<meta name="twitter:url" content={siteUrl + slug} />
