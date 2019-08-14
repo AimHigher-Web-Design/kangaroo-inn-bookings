@@ -18,9 +18,10 @@ h1,
 h2,
 h3,
 legend {
-	color: $primary_dark_75;
+	color: $primary_dark_25;
 	font: $font_headings;
 	font-weight: bold;
+	margin-top: 0;
 }
 
 h1 {
@@ -321,9 +322,7 @@ pre {
 
 main {
 	padding: 20px 10px;
-	margin: 0 auto;
-	width: 90vw;
-	max-width: 1040px;
+	width: 100vw;
 
 	.gatsby-image-wrapper {
 		float: right;

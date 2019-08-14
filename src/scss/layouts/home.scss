@@ -17,7 +17,7 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: -10px;
+	margin: -10px auto;
 
 	h2 {
 		width: 100%;
@@ -73,7 +73,7 @@
 @supports (grid-template-areas: '.') {
 	.features {
 		// Cancel Flexbox
-		margin: 0;
+		margin: 0 auto;
 		justify-content: stretch;
 
 		display: grid;
@@ -104,6 +104,30 @@
 			.block {
 				height: 40vw;
 				max-height: 500px;
+			}
+		}
+	}
+}
+
+main {
+	> * {
+		padding: 50px 0 100px;
+		width: 90vw;
+		max-width: 1040px;
+		margin: 0 auto;
+
+		&:nth-child(2n - 1) {
+			position: relative;
+
+			&:before {
+				background: $primary_light_10;
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: calc(-1 * (50vw - 50%));
+				width: 100vw;
+				z-index: -2;
 			}
 		}
 	}
