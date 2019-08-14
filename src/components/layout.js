@@ -51,8 +51,7 @@ const Meta = ({ name, title, description, slug, siteUrl, image }) => {
 	return (
 		<Helmet>
 			<title>{name}</title>
-			<meta name="description" content={description} />
-			<link rel="canonical" href={siteUrl + slug} />
+			<link rel="canonical" href={siteUrl} />
 
 			<meta name="twitter:card" content="summary_large_image" />
 			<link rel="shortcut icon" href={Logo} />
@@ -63,14 +62,14 @@ const Meta = ({ name, title, description, slug, siteUrl, image }) => {
 			<base href="/" />
 
 			{/* Facebook */}
-			<meta property="og:url" content={siteUrl + slug} />
-
+			<meta property="og:url" content={siteUrl} />
+			<meta property="og:type" content="website" />
 			<meta name="title" property="og:title" content={name} />
 			<meta name="image" property="og:image" content={image} />
 			<meta name="description" property="og:description" content={description} />
 
 			{/* Twitter */}
-			<meta name="twitter:url" content={siteUrl + slug} />
+			<meta name="twitter:url" content={siteUrl} />
 			<meta name="twitter:title" content={name} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={image} />
