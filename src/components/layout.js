@@ -65,7 +65,7 @@ const Meta = ({ name, title, description, slug, siteUrl, image }) => {
 			{/* Facebook */}
 			<meta property="og:url" content={siteUrl + slug} />
 
-			<meta property="og:title" content={name} />
+			<meta name="title" property="og:title" content={name} />
 			<meta property="og:image" content={image} />
 			<meta property="og:description" content={description} />
 

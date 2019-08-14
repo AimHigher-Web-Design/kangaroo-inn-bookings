@@ -22,6 +22,7 @@ const Header = () => (
 				<Link to="/" className="site-logo">
 					<Img fluid={data.file.childImageSharp.fluid} style={{ width: '100%', height: 'auto', minHeight: '50px' }} />
 				</Link>
+				<h1>Kangaroo Inn Bookings</h1>
 			</header>
 		)}
 	/>

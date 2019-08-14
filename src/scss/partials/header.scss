@@ -15,6 +15,12 @@ header {
 		width: 80vw;
 		max-width: 500px;
 	}
+
+	h1 {
+		font-size: 0px;
+		position: absolute;
+		right: -200vw;
+	}
 }
 
 @media screen and (min-width: 40rem) {
