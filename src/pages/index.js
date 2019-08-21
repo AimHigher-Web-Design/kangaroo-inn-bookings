@@ -14,35 +14,39 @@ export default class IndexPage extends React.Component {
 				name: data.site.siteMetadata.title,
 				description: data.site.siteMetadata.description,
 				slug: data.site.siteMetadata.siteUrl,
-			}
+			},
+			images = data.images.edges
 
 		return (
 			<Layout meta={meta}>
 				<Booking />
 				{features.map(feature => (
-					<Features key={feature.title} {...feature} />
+					<div className="features" key={feature.title}>
+						<h2>{feature.title}</h2>
+						{feature.items.map(item => {
+							images.some(image => {
+								if (image.node.relativePath === item.image) {
+									item.image = image.node.childImageSharp.fixed
+									return true
+								}
+							})
+
+							return (
+								<div className="block" key={item.title}>
+									{item.image ? (
+										<Img fixed={item.image} />
+									) : (
+										<img src="https://images.unsplash.com/photo-1538384837305-defd24ace943?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=500&h=500&fit=crop&ixid=eyJhcHBfaWQiOjF9" />
+									)}
+								</div>
+							)
+						})}
+					</div>
 				))}
 			</Layout>
 		)
 	}
 }
-
-const Features = ({ title, items }) => (
-	<div className="features">
-		<h2>{title}</h2>
-		{items.map(item => (
-			<div className="block" key={item.title}>
-				<h3>{item.title}</h3>
-				{item.date && <p>{item.date}</p>}
-				{item.image ? (
-					<p>Image</p>
-				) : (
-					<img src="https://images.unsplash.com/photo-1538384837305-defd24ace943?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=500&h=500&fit=crop&ixid=eyJhcHBfaWQiOjF9" />
-				)}
-			</div>
-		))}
-	</div>
-)
 
 export const pageQuery = graphql`
 	query IndexQuery {
@@ -51,6 +55,18 @@ export const pageQuery = graphql`
 				title
 				description
 				siteUrl
+			}
+		}
+		images: allFile {
+			edges {
+				node {
+					relativePath
+					childImageSharp {
+						fixed(width: 300) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
 			}
 		}
 	}

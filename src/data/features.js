@@ -2,16 +2,19 @@ const whatsOn = {
 		title: "What's on in Perth",
 		items: [
 			{
-				title: 'Bledisloe Cup',
-				date: '10 August',
+				title: 'West Coast Eagles v Adelaide',
+				image: 'landing-page-images-1108-eaglesvscrows.png',
 			},
 			{
-				title: 'Boomers v Canada',
-				date: '17 August',
+				title: 'Craft Beer Festival',
+				image: 'landing-page-images-1608-craftbeerfest.png',
 			},
 			{
 				title: 'City to Surf',
-				date: '25 August',
+				image: 'landing-page-images-2508-citytosurf.png',
+			},
+			{
+				image: 'landing-page-images-2308-twilightyagansquare.png',
 			},
 		],
 	},
@@ -20,15 +23,18 @@ const whatsOn = {
 		items: [
 			{
 				title: 'Rottnest Island',
+				image: 'landing-page-images-rottnest.png',
 			},
 			{
 				title: 'Kings Park',
-			},
-			{
-				title: 'Cultural Centre',
+				image: 'landing-page-images-kingspark.png',
 			},
 			{
 				title: 'Perth Zoo',
+				image: 'landing-page-images-perth-zoo.png',
+			},
+			{
+				image: 'landing-page-images-london-court.png',
 			},
 		],
 	},
@@ -36,19 +42,16 @@ const whatsOn = {
 		title: 'Where to Eat',
 		items: [
 			{
-				title: 'Pub',
+				image: 'landing-page-images-food-cafeduotone.png',
 			},
 			{
-				title: 'Breakfast',
+				image: 'landing-page-images-food-hifumiya.png',
 			},
 			{
-				title: 'Lunch',
+				image: 'landing-page-images-food-measure.png',
 			},
 			{
-				title: 'Yagan Square',
-			},
-			{
-				title: 'Northbridge',
+				image: 'landing-page-images-food-ribs_burgers.png',
 			},
 		],
 	},
