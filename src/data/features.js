@@ -2,14 +2,6 @@ const whatsOn = {
 		title: "What's on in Perth",
 		items: [
 			{
-				title: 'West Coast Eagles v Adelaide',
-				image: 'landing-page-images-1108-eaglesvscrows.png',
-			},
-			{
-				title: 'Craft Beer Festival',
-				image: 'landing-page-images-1608-craftbeerfest.png',
-			},
-			{
 				title: 'City to Surf',
 				image: 'landing-page-images-2508-citytosurf.png',
 			},
