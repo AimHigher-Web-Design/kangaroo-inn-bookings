@@ -31,15 +31,19 @@ export default class IndexPage extends React.Component {
 								}
 							})
 
-							return (
-								<div className="block" key={item.title}>
-									{item.image ? (
-										<Img fixed={item.image} />
-									) : (
-										<img src="https://images.unsplash.com/photo-1538384837305-defd24ace943?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=500&h=500&fit=crop&ixid=eyJhcHBfaWQiOjF9" />
-									)}
-								</div>
-							)
+							if (item.link) {
+								return (
+									<a href={item.link} target="_blank" className="block" key={item.title}>
+										<Feature {...item} />
+									</a>
+								)
+							} else {
+								return (
+									<div className="block" key={item.title}>
+										<Feature {...item} />
+									</div>
+								)
+							}
 						})}
 					</div>
 				))}
@@ -47,6 +51,8 @@ export default class IndexPage extends React.Component {
 		)
 	}
 }
+
+const Feature = ({ image }) => <Img fixed={image} />
 
 export const pageQuery = graphql`
 	query IndexQuery {
